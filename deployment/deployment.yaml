@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: springEKS
+  template:
+    metadata:
+      labels:
+        app: springEKS
+    spec:
+      containers:
+        - name: Spring Using EKS
+          image:
+          ports:
+            - containerPort: 8080
