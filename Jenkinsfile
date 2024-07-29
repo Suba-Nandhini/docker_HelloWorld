@@ -25,7 +25,7 @@ pipeline{
      stage('JAR Creation'){
        steps{
               script{
-                              bat "mvn clean"
+                              bat "C:\\Users\\chidambaranathans\\Downloads\\apache-maven-3.9.3\\bin\\mvn clean"
                               echo ".......Cleaning the previous build......"
                               bat "mvn validate"
                               bat "mvn compile"
